@@ -7,14 +7,14 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    public function testWarmupEvents() {
-        $response = $this->get('/warmupevents');
-        $response->assertStatus(200)
-            ->assertJsonCount(3)
-            ->assertJsonPath('0.name', 'Laravel convention 2020')
-            ->assertJsonPath('1.name', 'Laravel convention 2021')
-            ->assertJsonPath('2.name', 'React convention 2021');
-    }
+    // public function testWarmupEvents() {
+    //     $response = $this->get('/warmupevents');
+    //     $response->assertStatus(200)
+    //         ->assertJsonCount(3)
+    //         ->assertJsonPath('0.name', 'Laravel convention 2020')
+    //         ->assertJsonPath('1.name', 'Laravel convention 2021')
+    //         ->assertJsonPath('2.name', 'React convention 2021');
+    // }
 
     public function testEvents() {
         $response = $this->get('/events');
