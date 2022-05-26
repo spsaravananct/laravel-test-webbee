@@ -9,6 +9,6 @@ class Event extends Model
 {
 	public function workshop()
     {
-        return $this->hasOne(Workshop::class);
+        return $this->hasMany(Workshop::class);
     }
 }
