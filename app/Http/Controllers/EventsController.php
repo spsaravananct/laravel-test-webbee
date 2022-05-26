@@ -98,7 +98,7 @@ class EventsController extends BaseController
 
     public function getEventsWithWorkshops() {
 
-        $events = Event::orderBy('name')->with('workshop')
+        $events = Event::orderBy('name')->with('workshops')
                ->get();
 
         return response()->json($events);
@@ -186,7 +186,7 @@ class EventsController extends BaseController
         {
             $query->whereDate('start', '>', date('Y-m-d'));
 
-        })->with('workshop')->get();
+        })->with('workshops')->get();
 
          return response()->json($events);
 
